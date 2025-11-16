@@ -1,0 +1,41 @@
+# Core Data Science Libraries
+pandas
+numpy
+scikit-learn
+scipy
+
+# Time Series and Regime Detection
+hmmlearn
+statsmodels
+pomegranate
+
+# Financial Data
+yfinance
+fredapi
+ta
+pyfolio-reloaded
+
+# Machine Learning Models
+xgboost
+lightgbm
+
+# Explainability
+shap
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Language Models
+transformers
+huggingface-hub
+torch
+
+# Application Framework
+gradio
+
+# Utilities
+python-dotenv
+tqdm
+pyyaml

@@ -1,0 +1,31 @@
+data:
+  start_date: "2010-01-01"
+  end_date: "2025-11-01"
+  tickers: [SPY, QQQ, AAPL, TSLA, GLD, ^VIX]
+
+features:
+  lookback_windows: [10, 30, 60, 90]
+  volatility_window: 30
+  momentum_periods: [5, 10, 20]
+
+models:
+  hmm:
+    n_states: 4
+    n_iter: 100
+    random_state: 42
+  gmm:
+    n_components: 4
+    covariance_type: "full"
+  kmeans:
+    n_clusters: 4
+
+risk:
+  var_confidence: 0.95
+  rolling_window: 252
+
+hf:
+  model_name: "google/flan-t5-base"
+  max_length: 150
+  temperature: 0.2
+
+random_seed: 42

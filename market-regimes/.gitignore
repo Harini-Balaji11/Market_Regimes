@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+env/
+
+# Data
+data/raw/
+data/processed/
+*.h5
+*.pkl
+
+# Models
+models/saved_models/
+models/checkpoints/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+config/secrets.yaml
