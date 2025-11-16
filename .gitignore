@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+
+# Data (too large for git)
+data/raw/*.csv
+data/processed/*.csv
+*.h5
+*.pkl
+*.parquet
+
+# Models
+models/saved_models/*.pkl
+models/checkpoints/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# API Keys
+config/secrets.yaml
