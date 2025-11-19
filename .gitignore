@@ -11,7 +11,7 @@ venv/
 
 # Data (too large for git)
 data/raw/*.csv
-data/processed/*.csv
+# data/processed/*.csv  # allow committing processed outputs when needed
 *.h5
 *.pkl
 *.parquet
