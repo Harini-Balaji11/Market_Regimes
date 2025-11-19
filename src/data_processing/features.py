@@ -13,6 +13,28 @@ import pandas as pd
 import numpy as np
 import ta
 from pathlib import Path
+def load_price_data(csv_file):
+    """
+    Load price CSV exported by download_data.py and ensure numeric types.
+    
+    The downloaded files contain two metadata rows ("Ticker" and "Date") before
+    the actual timeseries values, so we drop them and coerce numeric columns.
+    """
+    df = pd.read_csv(csv_file)
+    
+    if df.columns[0] != 'Date':
+        df = df.rename(columns={df.columns[0]: 'Date'})
+    
+    metadata_labels = {'Ticker', 'Date'}
+    df = df[~df['Date'].isin(metadata_labels)]
+    
+    df['Date'] = pd.to_datetime(df['Date'])
+    df = df.set_index('Date').sort_index()
+    
+    numeric_cols = [col for col in df.columns if col != 'Date']
+    df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors='coerce')
+    
+    return df
 
 def compute_returns(prices):
     """
@@ -172,7 +194,7 @@ def create_features_for_ticker(ticker, data_dir='data/raw'):
         print(f"  ✗ File not found: {csv_file}")
         return None
     
-    df = pd.read_csv(csv_file, index_col=0, parse_dates=True)
+    df = load_price_data(csv_file)
     print(f"  Loaded {len(df)} rows from {csv_file}")
     
     # Initialize feature DataFrame
