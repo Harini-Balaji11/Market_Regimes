@@ -352,24 +352,6 @@ This project demonstrates several important skills and concepts:
 
 These skills are applicable across many data science and finance domains.
 
-## Contributing
-
-Contributions are welcome. Areas that could benefit from additional work include:
-
-- Additional trading strategies with different logic
-- More sophisticated regime detection methods (e.g., Bayesian non-parametric approaches)
-- Portfolio optimization using regime information
-- Real-time regime prediction capabilities
-- Enhanced visualizations with interactive elements
-- Performance optimization for larger datasets
-- Additional risk metrics and analysis tools
-
-If you're interested in contributing, please review the code structure and consider the areas above or other improvements you think would be valuable.
-
-## License
-
-This project is intended for educational and research purposes. The code is provided as-is for learning and experimentation. Past performance does not guarantee future results, and this project should not be used for actual trading decisions without thorough validation and risk management.
-
 ## Acknowledgments
 
 This project uses several excellent open-source libraries:
@@ -382,18 +364,5 @@ This project uses several excellent open-source libraries:
 - **matplotlib and seaborn**: For creating visualizations
 
 We are grateful to the maintainers and contributors of these projects.
-
-## Contact and Support
-
-For questions, suggestions, or issues, please open an issue in the repository or contact the project maintainer. When reporting issues, please include:
-
-- Description of the problem
-- Steps to reproduce
-- Expected versus actual behavior
-- Relevant error messages or output
-
-Feedback and suggestions for improvements are always welcome.
-
----
 
 **Important Note**: This is an educational project demonstrating quantitative finance and machine learning concepts. The results shown are from historical backtesting and should not be interpreted as investment advice. Always conduct your own research and consider professional financial advice before making investment decisions. Past performance does not guarantee future results.
